@@ -86,3 +86,50 @@ aside {
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
 }
+
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+}
+
+li:nth-child(2) {
+  color: red;
+}
+
+li:nth-child(odd) {
+  color: gray;
+}
+
+/* Misconception: this wont work */
+article p:first-child {
+  color: red;
+}
+
+/* select all anchor elements that have an href attr. */
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+/* usually we make the visited and not visited links same color */
+a:visited {
+  /* color: #777; */
+  color: #1098ad;
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline wavy orangered;
+}
+
+/* state when we click on a link */
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+
+/* IMP - these four states are always defined in this exact order. LVHA  */
