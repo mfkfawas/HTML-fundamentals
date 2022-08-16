@@ -54,7 +54,9 @@ browser know that we are actually using HTML in this file -->
         <!-- using b tag instead of strong tag os not a good practice. b doesnt
     have any semantic meaning. strong el means that this is an imp el that we
     want to stand out from page. -->
-        <p>Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027</p>
+        <p id="author">
+          Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027
+        </p>
 
         <!-- img el is a spl el coz it doesnt have any content, therefore it also doesnt
     have a closing tag -->
@@ -124,7 +126,7 @@ browser know that we are actually using HTML in this file -->
 
     <aside>
       <h4>Related Posts</h4>
-      <ul>
+      <ul class="related">
         <li>
           <img
             src="img/related-1.jpg"
@@ -133,7 +135,7 @@ browser know that we are actually using HTML in this file -->
             height="75px"
           />
           <a href="#">How to learn web development</a>
-          <p>By Jonas Schmedtmann</p>
+          <p class="related-author">By Jonas Schmedtmann</p>
         </li>
         <li>
           <img
@@ -143,7 +145,7 @@ browser know that we are actually using HTML in this file -->
             height="75px"
           />
           <a href="#">The unknown powers of CSS</a>
-          <p>By Jim Dillon</p>
+          <p class="related-author">By Jim Dillon</p>
         </li>
         <li>
           <img
@@ -153,11 +155,13 @@ browser know that we are actually using HTML in this file -->
             height="75px"
           />
           <a href="#">Why JavaScript is awesome</a>
-          <p>By Matilda</p>
+          <p class="related-author">By Matilda</p>
         </li>
       </ul>
     </aside>
 
-    <footer><p>Copyright &copy; 2022 The Code Magazine</p></footer>
+    <footer>
+      <p id="copyright">Copyright &copy; 2022 The Code Magazine</p>
+    </footer>
   </body>
 </html>
