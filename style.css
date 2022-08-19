@@ -1,4 +1,19 @@
-h1,
+/*  This is not conflicting selecctors. In other words, this body selector is not selecting
+all of the elemetns, instead the properties get simply passed down to all the child els that 
+are contained within the body. 
+Usually we use the technique of putting the property that are related to text into the body.
+Many styles donot get inherited */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #444;
+  font-family: sans-serif;
+}
+
+/* h1,
 h2,
 h3,
 h4,
@@ -6,7 +21,7 @@ p,
 li {
   font-family: sans-serif;
   color: #444;
-}
+} */
 
 h1,
 h2,
@@ -22,10 +37,12 @@ h1 {
 
 h2 {
   font-size: 40px;
+  margin-bottom: 30px;
 }
 
 h3 {
   font-size: 30px;
+  margin: 40px 0 20px 0;
 }
 
 h4 {
@@ -39,10 +56,47 @@ p {
   font-size: 22px;
   /* 1.5 times of the font-size */
   line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+nav {
+  font-size: 18px;
+}
+
+article {
+  margin-bottom: 50px;
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 30px;
 }
 
 li {
   font-size: 20px;
+  margin-bottom: 10px;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+  padding: 20px 40px;
+  margin-bottom: 60px;
+}
+
+.post-header {
+  margin-bottom: 40px;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  padding: 50px 0;
 }
 
 /* footer p {
@@ -75,16 +129,6 @@ li {
 .related-author {
   font-size: 18px;
   font-weight: bold;
-}
-
-.main-header {
-  background-color: #f7f7f7;
-}
-
-aside {
-  background-color: #f7f7f7;
-  border-top: 5px solid #1098ad;
-  border-bottom: 5px solid #1098ad;
 }
 
 li:first-child {
@@ -131,5 +175,4 @@ a:active {
   background-color: black;
   font-style: italic;
 }
-
 /* IMP - these four states are always defined in this exact order. LVHA  */
