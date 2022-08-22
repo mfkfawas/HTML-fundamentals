@@ -11,6 +11,7 @@ Many styles donot get inherited */
 body {
   color: #444;
   font-family: sans-serif;
+  position: relative;
 }
 
 .container {
@@ -40,10 +41,42 @@ h1 {
   font-style: italic;
 }
 
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
 h2 {
   font-size: 40px;
   margin-bottom: 30px;
+  position: relative;
 }
+
+h2::first-letter {
+  font-size: 80px;
+}
+
+h2::after {
+  content: "TOP";
+  color: #444;
+  display: inline-block;
+  position: absolute;
+  top: -15px;
+  right: -25px;
+  background-color: #ffe70e;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+/* h2::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background-color: #1098ad;
+  margin-top: 10px;
+} */
 
 h3 {
   font-size: 30px;
@@ -64,12 +97,46 @@ p {
   margin-bottom: 15px;
 }
 
+/* adjacent sibling selector */
+h3 + p::first-line {
+  /* color: red; */
+}
+
 nav {
   font-size: 18px;
 }
 
+nav a:link {
+  margin-right: 20px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+nav a:link:last-child {
+  margin-right: 0;
+}
+
 article {
   margin-bottom: 50px;
+}
+
+button {
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1098ad;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+
+  bottom: 50px;
+  right: 50px;
+  transition: all 0.3s ease-in-out;
+}
+button:hover {
+  background-color: #fff;
+  color: #1098ad;
 }
 
 ul,
