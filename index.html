@@ -27,7 +27,7 @@ browser know that we are actually using HTML in this file -->
     <!-- Each el give its own meaning and structure to the page. -->
     <!-- header - top part of a web document -->
     <div class="container">
-      <header class="main-header">
+      <header class="main-header clearfix">
         <h1>📘 The Code Magazine</h1>
         <!-- links are what actually enables teh internet to be a world wide web. Two types of links, one that
         point towards outside the curr page, other that point to inner page sections. -->
@@ -39,6 +39,9 @@ browser know that we are actually using HTML in this file -->
           <a href="#">Flexbox</a>
           <a href="#">CSS Grid</a>
         </nav>
+
+        <!-- 1st and less used method to clear floats -->
+        <!-- <div class="clear"></div> -->
       </header>
 
       <!-- The <article> tag specifies independent, self-contained content. -->
@@ -50,12 +53,13 @@ browser know that we are actually using HTML in this file -->
             alt="image of the author"
             width="50px"
             height="50px"
+            class="author-img"
           />
 
           <!-- using b tag instead of strong tag os not a good practice. b doesnt
           have any semantic meaning. strong el means that this is an imp el that we
     want to stand out from page. -->
-          <p id="author">
+          <p id="author" class="author">
             Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027
           </p>
 

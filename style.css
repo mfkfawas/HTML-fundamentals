@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-  width: 800px;
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -158,7 +158,6 @@ li:last-child {
   background-color: #f7f7f7;
   padding: 20px 40px;
   margin-bottom: 60px;
-  height: 80px;
 }
 
 .post-header {
@@ -255,3 +254,49 @@ a:active {
   font-style: italic;
 }
 /* IMP - these four states are always defined in this exact order. LVHA  */
+
+/* FLOATS */
+.author-img {
+  float: left;
+  margin-bottom: 20px;
+}
+
+.author {
+  float: right;
+}
+
+h1 {
+  float: left;
+}
+
+nav {
+  float: right;
+}
+
+.clear {
+  /* bcz we used both left and right float on corr el's container. */
+  clear: both;
+}
+
+.clearfix::after {
+  clear: both;
+  /* after pseudo el only appears if we define something for content property. */
+  content: "";
+  /* psuedo el after is inline el. However, clearing float like this only work on a block
+  level el */
+  display: block;
+}
+
+article {
+  width: 825px;
+  float: left;
+}
+
+aside {
+  width: 300px;
+  float: right;
+}
+
+footer {
+  clear: both;
+}
